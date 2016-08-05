@@ -22,16 +22,11 @@ class UserPage extends React.Component {
     });
   }
 
-  test() {
-
-  }
-
   render() {
     return (
       <div>
         <h1>User Page</h1>
         <div>{this.state.fuckkkk}</div>
-        <div onClick={this.test()}></div>
         {/*<Link to={}*/}
       </div>
     );
