@@ -5,7 +5,8 @@ class UserPage extends React.Component {
   constructor( props ) {
     super( props );
     this.state = {
-      fuckkkk: ""
+      fuckkkk: []
+      // fuckkkk: ""
     }
   }
 
@@ -14,7 +15,8 @@ class UserPage extends React.Component {
       url: "/user",
       type: "get",
       success: res => {
-        this.setState({fuckkkk: res[0].name});
+        this.setState({fuckkkk: res});
+        // this.setState({fuckkkk: res[0].name});
       },
       error: error => {
         console.error( error );
@@ -26,7 +28,8 @@ class UserPage extends React.Component {
     return (
       <div>
         <h1>User Page</h1>
-        <div>{this.state.fuckkkk}</div>
+        {this.state.fuckkkk.map( user => <div>{ user.name }</div> )}
+        {/*<div>{this.state.fuckkkk}</div>*/}
         {/*<Link to={}*/}
       </div>
     );
